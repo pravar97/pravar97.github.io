@@ -3,81 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pravar Seth - Resume</title>
+    <title>Flexiwish - Revolutionizing Joint Health</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'flexiwish-purple': {
+                            '50': '#f5f3ff', // Lighter purple for backgrounds/accents
+                            '100': '#ede9fe',
+                            '200': '#ddd6fe',
+                            '300': '#c4b5fd',
+                            '400': '#a78bfa', // Main accent purple (can adjust)
+                            '500': '#8b5cf6',
+                            '600': '#7c3aed',
+                            '700': '#6d28d9',
+                            '800': '#5b21b6',
+                            '900': '#4c1d95'
+                        },
+                        'flexiwish-text': '#374151', // Dark gray for text
+                        'flexiwish-primary': '#8b5cf6', // Similar to purple-500
+                        'flexiwish-light': '#f3edf8', // Very light purple from screenshot form bg
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
-            color: white;
-            text-align: center;
+        /* Custom scrollbar for a more modern look (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        header {
-            padding: 50px;
-            font-size: 36px;
-            font-weight: bold;
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
         }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
-            margin-bottom: 25px;
+        ::-webkit-scrollbar-thumb {
+            background: #c4b5fd; /* flexiwish-purple-300 */
+            border-radius: 4px;
         }
-        h2 {
-            color: #f39c12;
-            font-size: 28px;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a78bfa; /* flexiwish-purple-400 */
         }
-        p {
-            font-size: 18px;
-            line-height: 1.5;
+        /* Active nav link style */
+        .nav-link-active {
+            color: #7c3aed; /* flexiwish-purple-600 */
+            font-weight: 600;
+            border-bottom: 2px solid #7c3aed;
         }
-        a {
-            color: #f1c40f;
-            text-decoration: none;
-            font-weight: bold;
+        /* Input field focus style */
+        .form-input:focus {
+            border-color: #a78bfa; /* flexiwish-purple-400 */
+            box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.5); /* Lighter purple shadow */
+        }
+        /* Button hover effect */
+        .btn-primary {
+            background-color: #8b5cf6; /* flexiwish-primary */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #7c3aed; /* flexiwish-purple-600 */
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
-<body>
-    <header>Pravar Seth - Portfolio</header>
-    <section>
-        <h2>Education</h2>
-        <p><strong>Master of Science in Computer Engineering</strong>, University of Southern California (2024-2026)</p>
-        <p>Courses: Hardware Foundations of Machine Learning, Computer Systems Architecture, MOS VLSI Circuit Design (A), Computer Systems Organization (A-)</p>
-        <p><strong>Master of Informatics</strong>, University of Edinburgh (2016-2021)</p>
-        <p>Thesis: Tools for teaching Computation and Logic using Flask-Python, focusing on Boolean Expressions, Truth Tables, Karnaugh Maps.</p>
-    </section>
-    <section>
-        <h2>Work Experience</h2>
-        <p><strong>Software Engineer</strong> - Genesis Global Technology (2023-2024)</p>
-        <p>Developed core components for Genesis Codegen, automated unit test generation, and designed a custom Gradle plugin for financial messaging.</p>
-        <p><strong>Full Stack Software Engineer - Senior Analyst</strong> - Accenture (2021-2023)</p>
-        <p>Built a reusable REST API template for financial transactions, developed an insurance document generator in Go, and created a React-Typescript web app for data analysis.</p>
-        <p><strong>Software Engineer</strong> - ESROE (2021)</p>
-        <p>Built C# applications for analyzing radar data and generating interactive visualizations.</p>
-        <p><strong>Intern</strong> - TH.0 (2020)</p>
-        <p>Developed key web pages that enabled TH.0 to host over 40 virtual hackathon events.</p>
-        <p><strong>Intern</strong> - Maidsafe (2018)</p>
-        <p>Created bash scripts to test nodes within the Safe Network and contributed to the Maidsafe knowledge base.</p>
-    </section>
-    <section>
-        <h2>Technical Skills & Certifications</h2>
-        <p><strong>Languages:</strong> C++, C, Java, Python, Kotlin, Go, Verilog</p>
-        <p><strong>Certifications:</strong> Professional Scrum Master 1</p>
-        <p><strong>Tools & Technologies:</strong> React, TypeScript, Flask, Gradle, REST APIs, Git, Kubernetes</p>
-    </section>
-    <section>
-        <h2>Achievements & Interests</h2>
-        <p><strong>Competitions:</strong> UK Mathematical Challenge (Gold), Scottish Mathematical Challenge (Gold), UKMT Team Maths Challenge (Scottish Finals)</p>
-        <p><strong>Hobbies:</strong> Drum Kit, Violin, Badminton</p>
-    </section>
-    <section>
-        <h2>Contact</h2>
-        <p>LinkedIn: <a href="https://linkedin.com/in/pravarseth" target="_blank">linkedin.com/in/pravarseth</a></p>
-    </section>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-flexiwish-primary" onclick="showPage('home')">
+                FlexiWish
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#" id="nav-home" class="nav-link text-flexiwish-text hover:text-flexiwish-primary px-3 py-2 rounded-md nav-link-active" onclick="showPage('home')">Home</a>
+                <a href="#" id="nav-features" class="nav-link text-flexiwish-text hover:text-flexiwish-primary px-3 py-2 rounded-md" onclick="showPage('features')">Features</a>
+                <a href="#" id="nav-assessment" class="nav-link text-flexiwish-text hover:text-flexiwish-primary px-3 py-2 rounded-md" onclick="showPage('assessment')">Health Assessment</a>
+                <a href="#" id="nav-pricing" class="nav-link text-flexiwish-text hover:text-flexiwish-primary px-3 py-2 rounded-md" onclick="showPage('pricing')">Pricing</a>
+                <a href="#" id="nav-about" class="nav-link text-flexiwish-text hover:text-flexiwish-primary px-3 py-2 rounded-md" onclick="showPage('about')">About Us</a>
+                <a href="#" id="nav-contact" class="nav-link text-flexiwish-text hover:text-flexiwish-primary px-3 py-2 rounded-md" onclick="showPage('contact')">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-flexiwish-text focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#" class="block nav-link text-flexiwish-text hover:bg-flexiwish-purple-50 px-4 py-2" onclick="showPage('home'); toggleMobileMenu();">Home</a>
+            <a href="#" class="block nav-link text-flexiwish-text hover:bg-flexiwish-purple-50 px-4 py-2" onclick="showPage('features'); toggleMobileMenu();">Features</a>
+            <a href="#" class="block nav-link text-flexiwish-text hover:bg-flexiwish-purple-50 px-4 py-2" onclick="showPage('assessment'); toggleMobileMenu();">Health Assessment</a>
+            <a href="#" class="block nav-link text-flexiwish-text hover:bg-flexiwish-purple-50 px-4 py-2" onclick="showPage('pricing'); toggleMobileMenu();">Pricing</a>
+            <a href="#" class="block nav-link text-flexiwish-text hover:bg-flexiwish-purple-50 px-4 py-2" onclick="showPage('about'); toggleMobileMenu();">About Us</a>
+            <a href="#" class="block nav-link text-flexiwish-text hover:bg-flexiwish-purple-50 px-4 py-2" onclick="showPage('contact'); toggleMobileMenu();">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <section id="home" class="page-content section-fade-in">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl min-h-[calc(100vh-200px)] flex flex-col justify-center items-center text-center">
+                <img src="https://placehold.co/150x150/8b5cf6/FFFFFF?text=FW" alt="FlexiWish Logo" class="mb-8 rounded-full shadow-lg">
+                <h1 class="text-4xl md:text-5xl font-bold text-flexiwish-primary mb-6">Welcome to FlexiWish</h1>
+                <p class="text-lg md:text-xl text-flexiwish-text mb-8 max-w-2xl">
+                    Your personal AI companion for optimal joint health, posture correction, and enhanced fitness. Understand your body, move better, live healthier.
+                </p>
+                <button class="btn-primary text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-lg transform hover:scale-105" onclick="showPage('assessment')">
+                    Start Your Health Assessment
+                </button>
+                <div class="mt-12 grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-flexiwish-purple-50 p-6 rounded-lg shadow">
+                        <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-flexiwish-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <h3 class="text-xl font-semibold text-flexiwish-text">AI-Powered Analysis</h3>
+                        </div>
+                        <p class="text-flexiwish-text">Leverage cutting-edge computer vision to track and analyze your joint movements with precision.</p>
+                    </div>
+                    <div class="bg-flexiwish-purple-50 p-6 rounded-lg shadow">
+                         <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-flexiwish-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 16v-2m8-8h2M4 12H2m15.364 6.364l1.414 1.414M5.222 5.222l1.414 1.414m12.728 0l-1.414 1.414M6.636 17.364l-1.414 1.414"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            <h3 class="text-xl font-semibold text-flexiwish-text">Personalized Feedback</h3>
+                        </div>
+                        <p class="text-flexiwish-text">Receive tailored insights and actionable recommendations to improve your posture and joint health.</p>
+                    </div>
+                    <div class="bg-flexiwish-purple-50 p-6 rounded-lg shadow">
+                        <div class="flex items-center mb-3">
+                            <svg class="w-8 h-8 text-flexiwish-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <h3 class="text-xl font-semibold text-flexiwish-text">Track Your Progress</h3>
+                        </div>
+                        <p class="text-flexiwish-text">Monitor your improvements over time with intuitive charts and progress reports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="page-content hidden section-fade-in">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-flexiwish-primary mb-10">Discover FlexiWish Features</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-flexiwish-text mb-4">Advanced Joint Tracking</h3>
+                        <p class="text-flexiwish-text mb-4">Our state-of-the-art computer vision algorithms accurately detect and track 20+ key body joints in real-time. Understand your movement patterns like never before.</p>
+                        <ul class="list-disc list-inside text-flexiwish-text space-y-1">
+                            <li>Precise angle measurements</li>
+                            <li>Movement range analysis</li>
+                            <li>Symmetry assessment</li>
+                        </ul>
+                    </div>
+                    <img src="https://placehold.co/600x400/ddd6fe/4c1d95?text=Joint+Tracking+Visual" alt="Joint Tracking" class="rounded-lg shadow-md">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <img src="https://placehold.co/600x400/c4b5fd/4c1d95?text=Posture+Correction+Visual" alt="Posture Correction" class="rounded-lg shadow-md md:order-last">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-flexiwish-text mb-4">Intelligent Posture Correction</h3>
+                        <p class="text-flexiwish-text mb-4">Get instant feedback on your sitting and standing posture. FlexiWish helps you identify and correct habits that lead to discomfort and long-term issues.</p>
+                        <ul class="list-disc list-inside text-flexiwish-text space-y-1">
+                            <li>Real-time slouch detection</li>
+                            <li>Head and shoulder alignment alerts</li>
+                            <li>Ergonomic recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-flexiwish-text mb-4">Personalized Fitness Programs</h3>
+                        <p class="text-flexiwish-text mb-4">Based on your health assessment and goals, FlexiWish suggests targeted exercises and stretches to improve flexibility, strength, and overall joint well-being.</p>
+                        <ul class="list-disc list-inside text-flexiwish-text space-y-1">
+                            <li>Guided exercise routines</li>
+                            <li>Form correction during workouts</li>
+                            <li>Progressive difficulty levels</li>
+                        </ul>
+                    </div>
+                    <img src="https://placehold.co/600x400/a78bfa/FFFFFF?text=Fitness+Programs+Visual" alt="Fitness Programs" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment" class="page-content hidden section-fade-in">
+            <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-flexiwish-primary mb-2">Health Assessment</h2>
+                <p class="text-center text-flexiwish-text mb-8">Tell us about yourself to personalize your FlexiWish experience.</p>
+                
+                <form id="healthAssessmentForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-flexiwish-text mb-1">Age</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.597 2.284C17.013 2.098 16.403 2 15.765 2C13.064 2 11.27 4.122 11.023 6.766C10.943 7.597 11.064 8.415 11.368 9.15H6.07C5.791 9.15 5.523 9.266 5.326 9.472C5.13 9.677 5.019 9.955 5.019 10.246V10.4C5.019 10.691 5.13 10.969 5.326 11.175C5.523 11.38 5.791 11.496 6.07 11.496H11.368C11.064 12.231 10.943 13.049 11.023 13.88C11.27 16.524 13.064 18.646 15.765 18.646C16.403 18.646 17.013 18.548 17.597 18.362C17.572 18.479 17.553 18.598 17.553 18.721C17.553 20.533 19.016 22 20.808 22C22.6 22 24.063 20.533 24.063 18.721C24.063 16.909 22.6 15.446 20.808 15.446C20.123 15.446 19.493 15.656 18.983 16.02C18.236 14.983 17.815 13.729 17.815 12.323C17.815 10.917 18.236 9.663 18.983 8.626C19.493 8.99 20.123 9.2 20.808 9.2C22.6 9.2 24.063 7.737 24.063 5.925C24.063 4.113 22.6 2.65 20.808 2.65C17.553 5.721 17.572 2.399 17.597 2.284ZM15.765 3.646C16.056 3.646 16.335 3.686 16.602 3.761C16.102 4.407 15.765 5.181 15.765 6.027C15.765 6.873 16.102 7.647 16.602 8.293C16.335 8.368 16.056 8.408 15.765 8.408C13.973 8.408 12.669 7.058 12.669 5.35C12.669 3.642 13.973 2.292 15.765 2.292C15.765 3.642 15.765 3.646 15.765 3.646ZM15.765 12.323C15.765 12.323 15.765 12.323 15.765 12.323C13.973 12.323 12.669 13.673 12.669 15.38C12.669 17.088 13.973 18.438 15.765 18.438C16.056 18.438 16.335 18.398 16.602 18.323C16.102 17.677 15.765 16.903 15.765 16.057C15.765 15.211 16.102 14.437 16.602 13.791C16.335 13.716 16.056 13.676 15.765 13.676C15.765 12.323 15.765 12.323 15.765 12.323Z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                </div>
+                                <input type="number" name="age" id="age" class="form-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="Your age">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="height" class="block text-sm font-medium text-flexiwish-text mb-1">Height (cm)</label>
+                             <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h14.25m-14.25 4.5h14.25m0 0L21 12m-2.25 1.5L21 15m-3-7.5V21m-10.5-11.25V21m-3.75-3.75V21m6.75-12.75V21" /></svg>
+                                </div>
+                                <input type="number" name="height" id="height" class="form-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="e.g., 175">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="weight" class="block text-sm font-medium text-flexiwish-text mb-1">Weight (kg)</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5M12 12.75l-6-6 9-3.375M12 12.75l6 6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </div>
+                                <input type="number" name="weight" id="weight" class="form-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="e.g., 70">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="occupation" class="block text-sm font-medium text-flexiwish-text mb-1">Occupation</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.073a2.25 2.25 0 01-2.25 2.25h-12a2.25 2.25 0 01-2.25-2.25v-4.073M15.75 9.75h-7.5M15.75 9.75c0-4.142-3.358-7.5-7.5-7.5S.75 5.608.75 9.75M15.75 9.75c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5" /></svg>
+                                </div>
+                                <input type="text" name="occupation" id="occupation" class="form-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="e.g., Software Developer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="location" class="block text-sm font-medium text-flexiwish-text mb-1">Location</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                                </div>
+                                <input type="text" name="location" id="location" class="form-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="e.g., City, Country">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="sex" class="block text-sm font-medium text-flexiwish-text mb-1">Sex</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                                </div>
+                                <select id="sex" name="sex" class="form-input block w-full pl-10 pr-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none sm:text-sm">
+                                    <option value="">Select...</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer_not_to_say">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="jointHealthGoals" class="block text-sm font-medium text-flexiwish-text mb-1">Joint Health Goals</label>
+                        <textarea id="jointHealthGoals" name="jointHealthGoals" rows="3" class="form-input block w-full pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="e.g., Reduce back pain, improve flexibility, prepare for a marathon..."></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="w-full btn-primary text-white font-semibold py-3 px-4 rounded-md shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-flexiwish-primary">
+                            Submit Assessment
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="pricing" class="page-content hidden section-fade-in">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-flexiwish-primary mb-10">Our Plans</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="border border-flexiwish-purple-200 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold text-flexiwish-text mb-2">Basic</h3>
+                        <p class="text-4xl font-bold text-flexiwish-primary mb-4">$9<span class="text-lg font-normal text-gray-500">/mo</span></p>
+                        <ul class="space-y-2 text-flexiwish-text mb-6">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Core Joint Tracking</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Basic Posture Analysis</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Limited Exercise Library</li>
+                        </ul>
+                        <button class="w-full bg-gray-200 text-flexiwish-text font-semibold py-2 px-4 rounded-md hover:bg-gray-300">Choose Basic</button>
+                    </div>
+                    <div class="border-2 border-flexiwish-primary rounded-lg p-6 shadow-2xl relative">
+                        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-flexiwish-primary text-white text-xs font-semibold px-3 py-1 rounded-full">MOST POPULAR</div>
+                        <h3 class="text-2xl font-semibold text-flexiwish-text mb-2">Pro</h3>
+                        <p class="text-4xl font-bold text-flexiwish-primary mb-4">$19<span class="text-lg font-normal text-gray-500">/mo</span></p>
+                        <ul class="space-y-2 text-flexiwish-text mb-6">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Advanced Joint Tracking</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Full Posture Correction Suite</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Personalized Fitness Programs</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Progress Tracking & Reports</li>
+                        </ul>
+                        <button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-md">Choose Pro</button>
+                    </div>
+                    <div class="border border-flexiwish-purple-200 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold text-flexiwish-text mb-2">Premium</h3>
+                        <p class="text-4xl font-bold text-flexiwish-primary mb-4">$29<span class="text-lg font-normal text-gray-500">/mo</span></p>
+                        <ul class="space-y-2 text-flexiwish-text mb-6">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>All Pro Features</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>1-on-1 Coaching Session (Monthly)</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Priority Support</li>
+                        </ul>
+                        <button class="w-full bg-gray-200 text-flexiwish-text font-semibold py-2 px-4 rounded-md hover:bg-gray-300">Choose Premium</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-content hidden section-fade-in">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-flexiwish-primary mb-10">About FlexiWish</h2>
+                <div class="max-w-3xl mx-auto text-flexiwish-text space-y-6 text-lg">
+                    <p>FlexiWish was born from a passion for leveraging technology to enhance human well-being. We believe that understanding your body's mechanics is the first step towards a healthier, more active life.</p>
+                    <p>Our team of kinesiologists, software engineers, and AI specialists have collaborated to create an intuitive and powerful tool that provides actionable insights into your joint health and posture. We're dedicated to helping you move better, feel better, and live without the limitations of joint discomfort.</p>
+                    <p>Our mission is to make professional-grade biomechanical analysis accessible to everyone, empowering individuals to take proactive control of their physical health through personalized guidance and support.</p>
+                    <img src="https://placehold.co/700x400/ede9fe/4c1d95?text=Our+Team+or+Mission+Visual" alt="FlexiWish Team or Mission" class="rounded-lg shadow-md my-8">
+                    <p>We are committed to continuous research and development, ensuring FlexiWish remains at the forefront of health technology, always striving to provide the best possible outcomes for our users.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-content hidden section-fade-in">
+             <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-flexiwish-primary mb-10">Get In Touch</h2>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="contactName" class="block text-sm font-medium text-flexiwish-text mb-1">Full Name</label>
+                        <input type="text" name="contactName" id="contactName" required class="form-input block w-full pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="contactEmail" class="block text-sm font-medium text-flexiwish-text mb-1">Email Address</label>
+                        <input type="email" name="contactEmail" id="contactEmail" required class="form-input block w-full pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="contactSubject" class="block text-sm font-medium text-flexiwish-text mb-1">Subject</label>
+                        <input type="text" name="contactSubject" id="contactSubject" required class="form-input block w-full pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="Question about features">
+                    </div>
+                    <div>
+                        <label for="contactMessage" class="block text-sm font-medium text-flexiwish-text mb-1">Message</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="4" required class="form-input block w-full pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" placeholder="Your message..."></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full btn-primary text-white font-semibold py-3 px-4 rounded-md shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-flexiwish-primary">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-10 text-center text-flexiwish-text">
+                    <p>You can also reach us at:</p>
+                    <p>Email: <a href="mailto:support@flexiwish.com" class="text-flexiwish-primary hover:underline">support@flexiwish.com</a></p>
+                    <p>Phone: +1 (555) 123-4567 (Placeholder)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="container mx-auto px-6 py-8 text-center text-flexiwish-text">
+            <p>&copy; <span id="currentYear"></span> FlexiWish. All rights reserved.</p>
+            <p class="text-sm">Pioneering a healthier future, one movement at a time.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-flexiwish-primary">Privacy Policy</a>
+                <a href="#" class="hover:text-flexiwish-primary">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation
+        const pages = document.querySelectorAll('.page-content');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function showPage(pageId) {
+            pages.forEach(page => {
+                if (page.id === pageId) {
+                    page.classList.remove('hidden');
+                    // Trigger reflow for animation
+                    void page.offsetWidth; 
+                    page.classList.add('section-fade-in');
+                } else {
+                    page.classList.add('hidden');
+                    page.classList.remove('section-fade-in');
+                }
+            });
+            updateActiveNavLink(pageId);
+        }
+
+        function updateActiveNavLink(activePageId) {
+            navLinks.forEach(link => {
+                if (link.id === `nav-${activePageId}` || (link.textContent.toLowerCase().replace(' ', '') === activePageId && link.closest('#mobile-menu'))) {
+                    link.classList.add('nav-link-active');
+                     if(link.closest('#mobile-menu')) link.classList.add('bg-flexiwish-purple-100');
+                } else {
+                    link.classList.remove('nav-link-active');
+                    if(link.closest('#mobile-menu')) link.classList.remove('bg-flexiwish-purple-100');
+                }
+            });
+        }
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Form submission handlers (basic alert for now)
+        const healthAssessmentForm = document.getElementById('healthAssessmentForm');
+        if(healthAssessmentForm) {
+            healthAssessmentForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Health Assessment Submitted! (This is a demo)');
+                // Here you would typically send the data to a server
+            });
+        }
+        
+        const contactForm = document.getElementById('contactForm');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Message Sent! (This is a demo)');
+                // Here you would typically send the data to a server
+                contactForm.reset();
+            });
+        }
+
+
+        // Initialize with the home page
+        showPage('home');
+    </script>
+
 </body>
 </html>
